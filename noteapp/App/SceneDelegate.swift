@@ -19,12 +19,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = UIWindow(windowScene: windowScene)
 
-        let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
-        
-        let rootVC = storyboard.instantiateViewController(identifier: "SignUpController")
-        
-        let rootNC = UINavigationController(rootViewController: rootVC)
-        self.window?.rootViewController = rootNC
+        if mainStore.state.user == nil {
+            let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
+
+            let rootVC = storyboard.instantiateViewController(identifier: "SignUpController")
+
+            let rootNC = UINavigationController(rootViewController: rootVC)
+            self.window?.rootViewController = rootNC
+        }
+        else {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+
+            let rootVC = storyboard.instantiateViewController(identifier: "HomeController")
+
+            let rootNC = UINavigationController(rootViewController: rootVC)
+            self.window?.rootViewController = rootNC
+        }
+
         self.window?.makeKeyAndVisible()
     }
 

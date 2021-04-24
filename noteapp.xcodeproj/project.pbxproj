@@ -20,6 +20,17 @@
 		F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED522633041F00CC2DD7 /* AuthService.swift */; };
 		F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F483ED5D263307B100CC2DD7 /* SwiftyJSON */; };
 		F483ED67263309A300CC2DD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED66263309A300CC2DD7 /* User.swift */; };
+		F4A53DC726348C6E00FC7FC5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A53DC626348C6E00FC7FC5 /* Login.storyboard */; };
+		F4A53DCC26349C6E00FC7FC5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */; };
+		F4A53DD126349C7900FC7FC5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DD026349C7900FC7FC5 /* HomeController.swift */; };
+		F4A53DD62634A0B800FC7FC5 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DD52634A0B800FC7FC5 /* AppState.swift */; };
+		F4A53DE52634A58400FC7FC5 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4A53DE42634A58400FC7FC5 /* ReSwift */; };
+		F4A53DEB2634A5D900FC7FC5 /* SetUserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DEA2634A5D900FC7FC5 /* SetUserAction.swift */; };
+		F4A53DF02634A61600FC7FC5 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DEF2634A61600FC7FC5 /* Reducer.swift */; };
+		F4A53DF52634A6BF00FC7FC5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DF42634A6BF00FC7FC5 /* Store.swift */; };
+		F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */; };
+		F4A53E002634BC3300FC7FC5 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4A53DFF2634BC3300FC7FC5 /* KeychainSwift */; };
+		F4A53E102634BEFB00FC7FC5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53E0F2634BEFB00FC7FC5 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +69,15 @@
 		F483ED4A2633024800CC2DD7 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F483ED522633041F00CC2DD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F483ED66263309A300CC2DD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4A53DC626348C6E00FC7FC5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F4A53DD026349C7900FC7FC5 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		F4A53DD52634A0B800FC7FC5 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		F4A53DEA2634A5D900FC7FC5 /* SetUserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUserAction.swift; sourceTree = "<group>"; };
+		F4A53DEF2634A61600FC7FC5 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		F4A53DF42634A6BF00FC7FC5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutAction.swift; sourceTree = "<group>"; };
+		F4A53E0F2634BEFB00FC7FC5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A53E002634BC3300FC7FC5 /* KeychainSwift in Frameworks */,
 				F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */,
+				F4A53DE52634A58400FC7FC5 /* ReSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				F483ED66263309A300CC2DD7 /* User.swift */,
+				F4A53DD52634A0B800FC7FC5 /* AppState.swift */,
+				F4A53DEF2634A61600FC7FC5 /* Reducer.swift */,
+				F4A53DF42634A6BF00FC7FC5 /* Store.swift */,
+				F4A53DE92634A5CC00FC7FC5 /* Actions */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +176,7 @@
 		F483ED3E263301B900CC2DD7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F4A53E0F2634BEFB00FC7FC5 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +201,8 @@
 			children = (
 				F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */,
 				F483ED0D2633012A00CC2DD7 /* Main.storyboard */,
+				F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */,
+				F4A53DC626348C6E00FC7FC5 /* Login.storyboard */,
 				F483ED452633023B00CC2DD7 /* SignUp.storyboard */,
 			);
 			path = Views;
@@ -184,6 +213,7 @@
 			children = (
 				F483ED0B2633012A00CC2DD7 /* ViewController.swift */,
 				F483ED4A2633024800CC2DD7 /* SignUpController.swift */,
+				F4A53DD026349C7900FC7FC5 /* HomeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +226,15 @@
 				F483ED072633012A00CC2DD7 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F4A53DE92634A5CC00FC7FC5 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				F4A53DEA2634A5D900FC7FC5 /* SetUserAction.swift */,
+				F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +255,8 @@
 			name = noteapp;
 			packageProductDependencies = (
 				F483ED5D263307B100CC2DD7 /* SwiftyJSON */,
+				F4A53DE42634A58400FC7FC5 /* ReSwift */,
+				F4A53DFF2634BC3300FC7FC5 /* KeychainSwift */,
 			);
 			productName = noteapp;
 			productReference = F483ED042633012A00CC2DD7 /* noteapp.app */;
@@ -290,6 +331,8 @@
 			mainGroup = F483ECFB2633012A00CC2DD7;
 			packageReferences = (
 				F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				F4A53DE32634A58400FC7FC5 /* XCRemoteSwiftPackageReference "ReSwift" */,
+				F4A53DFE2634BC3300FC7FC5 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = F483ED052633012A00CC2DD7 /* Products */;
 			projectDirPath = "";
@@ -310,6 +353,8 @@
 				F483ED142633012D00CC2DD7 /* LaunchScreen.storyboard in Resources */,
 				F483ED112633012D00CC2DD7 /* Assets.xcassets in Resources */,
 				F483ED462633023B00CC2DD7 /* SignUp.storyboard in Resources */,
+				F4A53DCC26349C6E00FC7FC5 /* Home.storyboard in Resources */,
+				F4A53DC726348C6E00FC7FC5 /* Login.storyboard in Resources */,
 				F483ED0F2633012A00CC2DD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,10 +381,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F483ED0C2633012A00CC2DD7 /* ViewController.swift in Sources */,
+				F4A53E102634BEFB00FC7FC5 /* String.swift in Sources */,
 				F483ED082633012A00CC2DD7 /* AppDelegate.swift in Sources */,
+				F4A53DD126349C7900FC7FC5 /* HomeController.swift in Sources */,
+				F4A53DD62634A0B800FC7FC5 /* AppState.swift in Sources */,
+				F4A53DEB2634A5D900FC7FC5 /* SetUserAction.swift in Sources */,
+				F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */,
 				F483ED67263309A300CC2DD7 /* User.swift in Sources */,
+				F4A53DF52634A6BF00FC7FC5 /* Store.swift in Sources */,
 				F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */,
 				F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */,
+				F4A53DF02634A61600FC7FC5 /* Reducer.swift in Sources */,
 				F483ED4B2633024800CC2DD7 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +735,22 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		F4A53DE32634A58400FC7FC5 /* XCRemoteSwiftPackageReference "ReSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReSwift/ReSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		F4A53DFE2634BC3300FC7FC5 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -690,6 +758,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		F4A53DE42634A58400FC7FC5 /* ReSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4A53DE32634A58400FC7FC5 /* XCRemoteSwiftPackageReference "ReSwift" */;
+			productName = ReSwift;
+		};
+		F4A53DFF2634BC3300FC7FC5 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4A53DFE2634BC3300FC7FC5 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

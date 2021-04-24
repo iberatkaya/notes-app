@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="mw6-A1-3fY">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dqA-bd-DYa" customClass="HomeController" customModule="noteapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="26D-pT-aSc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-r7-BJv" userLabel="Name Label">
+                                <rect key="frame" x="20" y="80" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgC-qL-bhc" userLabel="Email Label">
+                                <rect key="frame" x="20" y="117" width="374" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYK-Dj-2Mz" userLabel="Sign Out Button">
+                                <rect key="frame" x="140" y="802" width="134" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutButtonPressed:" destination="dqA-bd-DYa" eventType="touchUpInside" id="ZvI-qf-pvH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3G4-SW-ftW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2ek-r7-BJv" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="20" id="1Im-D6-zLA"/>
+                            <constraint firstItem="3G4-SW-ftW" firstAttribute="trailing" secondItem="QYK-Dj-2Mz" secondAttribute="trailing" constant="140" id="1Ja-9x-39r"/>
+                            <constraint firstItem="QYK-Dj-2Mz" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="140" id="3fH-X3-O66"/>
+                            <constraint firstItem="2ek-r7-BJv" firstAttribute="top" secondItem="3G4-SW-ftW" secondAttribute="top" constant="36" id="4rc-H8-xxf"/>
+                            <constraint firstItem="wgC-qL-bhc" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="20" id="DZU-F3-Wbs"/>
+                            <constraint firstItem="3G4-SW-ftW" firstAttribute="bottom" secondItem="QYK-Dj-2Mz" secondAttribute="bottom" constant="28" id="Jxh-8n-IcR"/>
+                            <constraint firstItem="wgC-qL-bhc" firstAttribute="top" secondItem="2ek-r7-BJv" secondAttribute="bottom" constant="8" id="N0N-je-mIQ"/>
+                            <constraint firstItem="3G4-SW-ftW" firstAttribute="trailing" secondItem="wgC-qL-bhc" secondAttribute="trailing" constant="20" id="Yaq-QH-iVL"/>
+                            <constraint firstItem="3G4-SW-ftW" firstAttribute="trailing" secondItem="2ek-r7-BJv" secondAttribute="trailing" constant="20" id="aeb-nk-z3h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="wgC-qL-bhc" id="Dwj-zq-pt9"/>
+                        <outlet property="nameLabel" destination="2ek-r7-BJv" id="EMW-IN-Wdj"/>
+                        <outlet property="signOutButton" destination="QYK-Dj-2Mz" id="maX-Ow-f41"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZQS-px-ew4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-287" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
