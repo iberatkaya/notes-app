@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		F483ED142633012D00CC2DD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */; };
 		F483ED1F2633012D00CC2DD7 /* noteappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED1E2633012D00CC2DD7 /* noteappTests.swift */; };
 		F483ED2A2633012D00CC2DD7 /* noteappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED292633012D00CC2DD7 /* noteappUITests.swift */; };
+		F483ED462633023B00CC2DD7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F483ED452633023B00CC2DD7 /* SignUp.storyboard */; };
+		F483ED4B2633024800CC2DD7 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED4A2633024800CC2DD7 /* SignUpController.swift */; };
+		F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED522633041F00CC2DD7 /* AuthService.swift */; };
+		F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F483ED5D263307B100CC2DD7 /* SwiftyJSON */; };
+		F483ED67263309A300CC2DD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED66263309A300CC2DD7 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		F483ED252633012D00CC2DD7 /* noteappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noteappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F483ED292633012D00CC2DD7 /* noteappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteappUITests.swift; sourceTree = "<group>"; };
 		F483ED2B2633012D00CC2DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F483ED452633023B00CC2DD7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		F483ED4A2633024800CC2DD7 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		F483ED522633041F00CC2DD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F483ED66263309A300CC2DD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +109,14 @@
 		F483ED062633012A00CC2DD7 /* noteapp */ = {
 			isa = PBXGroup;
 			children = (
-				F483ED072633012A00CC2DD7 /* AppDelegate.swift */,
-				F483ED092633012A00CC2DD7 /* SceneDelegate.swift */,
-				F483ED0B2633012A00CC2DD7 /* ViewController.swift */,
-				F483ED0D2633012A00CC2DD7 /* Main.storyboard */,
 				F483ED102633012D00CC2DD7 /* Assets.xcassets */,
-				F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */,
-				F483ED152633012D00CC2DD7 /* Info.plist */,
+				F483ED44263301ED00CC2DD7 /* App */,
+				F483ED3D263301B100CC2DD7 /* Models */,
+				F483ED3E263301B900CC2DD7 /* Extensions */,
+				F483ED3F263301C800CC2DD7 /* Helpers */,
+				F483ED43263301E500CC2DD7 /* Controllers */,
+				F483ED42263301E000CC2DD7 /* Views */,
+				F483ED41263301DA00CC2DD7 /* Services */,
 			);
 			path = noteapp;
 			sourceTree = "<group>";
@@ -128,6 +139,65 @@
 			path = noteappUITests;
 			sourceTree = "<group>";
 		};
+		F483ED3D263301B100CC2DD7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F483ED66263309A300CC2DD7 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F483ED3E263301B900CC2DD7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F483ED3F263301C800CC2DD7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F483ED41263301DA00CC2DD7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F483ED522633041F00CC2DD7 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F483ED42263301E000CC2DD7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */,
+				F483ED0D2633012A00CC2DD7 /* Main.storyboard */,
+				F483ED452633023B00CC2DD7 /* SignUp.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F483ED43263301E500CC2DD7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F483ED0B2633012A00CC2DD7 /* ViewController.swift */,
+				F483ED4A2633024800CC2DD7 /* SignUpController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F483ED44263301ED00CC2DD7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F483ED152633012D00CC2DD7 /* Info.plist */,
+				F483ED092633012A00CC2DD7 /* SceneDelegate.swift */,
+				F483ED072633012A00CC2DD7 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +214,9 @@
 			dependencies = (
 			);
 			name = noteapp;
+			packageProductDependencies = (
+				F483ED5D263307B100CC2DD7 /* SwiftyJSON */,
+			);
 			productName = noteapp;
 			productReference = F483ED042633012A00CC2DD7 /* noteapp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +288,9 @@
 				Base,
 			);
 			mainGroup = F483ECFB2633012A00CC2DD7;
+			packageReferences = (
+				F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = F483ED052633012A00CC2DD7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +309,7 @@
 			files = (
 				F483ED142633012D00CC2DD7 /* LaunchScreen.storyboard in Resources */,
 				F483ED112633012D00CC2DD7 /* Assets.xcassets in Resources */,
+				F483ED462633023B00CC2DD7 /* SignUp.storyboard in Resources */,
 				F483ED0F2633012A00CC2DD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +337,10 @@
 			files = (
 				F483ED0C2633012A00CC2DD7 /* ViewController.swift in Sources */,
 				F483ED082633012A00CC2DD7 /* AppDelegate.swift in Sources */,
+				F483ED67263309A300CC2DD7 /* User.swift in Sources */,
+				F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */,
 				F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */,
+				F483ED4B2633024800CC2DD7 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QH78WN2XWN;
-				INFOPLIST_FILE = noteapp/Info.plist;
+				INFOPLIST_FILE = noteapp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +537,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QH78WN2XWN;
-				INFOPLIST_FILE = noteapp/Info.plist;
+				INFOPLIST_FILE = noteapp/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +673,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F483ED5D263307B100CC2DD7 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F483ECFC2633012A00CC2DD7 /* Project object */;
 }
