@@ -18,9 +18,6 @@ class SignUpController: UIViewController, StoreSubscriber {
         super.viewDidLoad()
         errorMessageLabel.isHidden = true
         progressView.isHidden = true
-        nameTextField.text = ""
-        emailTextField.text = ""
-        passwordTextField.text = ""
     }
     
     // MARK: Redux
