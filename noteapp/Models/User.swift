@@ -1,8 +1,9 @@
 import Foundation
 import KeychainSwift
 
-struct User: Encodable, Decodable {
-    init(name: String, email: String, password: String) {
+struct User: Codable {
+    init(id: String, name: String, email: String, password: String) {
+        self.id = id
         self.name = name
         self.email = email
         self.password = password
@@ -17,12 +18,16 @@ struct User: Encodable, Decodable {
     /// The password of the user.
     var password: String
     
+    /// The ID of the user.
+    var id: String
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         name = try values.decode(String.self, forKey: .name)
         email = try values.decode(String.self, forKey: .email)
+        id = try values.decode(String.self, forKey: ._id)
         
-        //Store the password in the Keychain.
+        // Store the password in the Keychain.
         let keychain = KeychainSwift()
         guard let password = keychain.get("password") else {
             throw "Password does not exist"
@@ -31,12 +36,13 @@ struct User: Encodable, Decodable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case email, name
+        case email, name, _id
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(name, forKey: .name)
         try container.encode(email, forKey: .email)
+        try container.encode(id, forKey: ._id)
     }
 }

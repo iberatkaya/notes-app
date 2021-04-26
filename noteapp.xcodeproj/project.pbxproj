@@ -31,6 +31,11 @@
 		F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */; };
 		F4A53E002634BC3300FC7FC5 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4A53DFF2634BC3300FC7FC5 /* KeychainSwift */; };
 		F4A53E102634BEFB00FC7FC5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53E0F2634BEFB00FC7FC5 /* String.swift */; };
+		F4E8957F2637077B0030503E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8957E2637077B0030503E /* NoteService.swift */; };
+		F4E89585263707CA0030503E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E89584263707CA0030503E /* Note.swift */; };
+		F4E895A1263726C30030503E /* AddNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E895A0263726C30030503E /* AddNote.storyboard */; };
+		F4E895A62637347D0030503E /* AddNoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E895A52637347D0030503E /* AddNoteController.swift */; };
+		F4E895B1263742E70030503E /* ProgressViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E895B0263742E70030503E /* ProgressViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		F4A53DF42634A6BF00FC7FC5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutAction.swift; sourceTree = "<group>"; };
 		F4A53E0F2634BEFB00FC7FC5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F4E8957E2637077B0030503E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
+		F4E89584263707CA0030503E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		F4E895A0263726C30030503E /* AddNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNote.storyboard; sourceTree = "<group>"; };
+		F4E895A52637347D0030503E /* AddNoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteController.swift; sourceTree = "<group>"; };
+		F4E895B0263742E70030503E /* ProgressViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				F483ED66263309A300CC2DD7 /* User.swift */,
+				F4E89584263707CA0030503E /* Note.swift */,
 				F4A53DD52634A0B800FC7FC5 /* AppState.swift */,
 				F4A53DEF2634A61600FC7FC5 /* Reducer.swift */,
-				F4A53DF42634A6BF00FC7FC5 /* Store.swift */,
-				F4A53DE92634A5CC00FC7FC5 /* Actions */,
+				F4E89583263707BB0030503E /* Redux */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,6 +194,7 @@
 		F483ED3F263301C800CC2DD7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F4E895B0263742E70030503E /* ProgressViewHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				F483ED522633041F00CC2DD7 /* AuthService.swift */,
+				F4E8957E2637077B0030503E /* NoteService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -202,6 +214,7 @@
 				F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */,
 				F483ED0D2633012A00CC2DD7 /* Main.storyboard */,
 				F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */,
+				F4E895A0263726C30030503E /* AddNote.storyboard */,
 				F4A53DC626348C6E00FC7FC5 /* Login.storyboard */,
 				F483ED452633023B00CC2DD7 /* SignUp.storyboard */,
 			);
@@ -213,6 +226,7 @@
 			children = (
 				F483ED0B2633012A00CC2DD7 /* ViewController.swift */,
 				F483ED4A2633024800CC2DD7 /* SignUpController.swift */,
+				F4E895A52637347D0030503E /* AddNoteController.swift */,
 				F4A53DD026349C7900FC7FC5 /* HomeController.swift */,
 			);
 			path = Controllers;
@@ -235,6 +249,15 @@
 				F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */,
 			);
 			path = Actions;
+			sourceTree = "<group>";
+		};
+		F4E89583263707BB0030503E /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				F4A53DF42634A6BF00FC7FC5 /* Store.swift */,
+				F4A53DE92634A5CC00FC7FC5 /* Actions */,
+			);
+			path = Redux;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F483ED142633012D00CC2DD7 /* LaunchScreen.storyboard in Resources */,
+				F4E895A1263726C30030503E /* AddNote.storyboard in Resources */,
 				F483ED112633012D00CC2DD7 /* Assets.xcassets in Resources */,
 				F483ED462633023B00CC2DD7 /* SignUp.storyboard in Resources */,
 				F4A53DCC26349C6E00FC7FC5 /* Home.storyboard in Resources */,
@@ -385,10 +409,14 @@
 				F483ED082633012A00CC2DD7 /* AppDelegate.swift in Sources */,
 				F4A53DD126349C7900FC7FC5 /* HomeController.swift in Sources */,
 				F4A53DD62634A0B800FC7FC5 /* AppState.swift in Sources */,
+				F4E895A62637347D0030503E /* AddNoteController.swift in Sources */,
+				F4E89585263707CA0030503E /* Note.swift in Sources */,
 				F4A53DEB2634A5D900FC7FC5 /* SetUserAction.swift in Sources */,
 				F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */,
+				F4E8957F2637077B0030503E /* NoteService.swift in Sources */,
 				F483ED67263309A300CC2DD7 /* User.swift in Sources */,
 				F4A53DF52634A6BF00FC7FC5 /* Store.swift in Sources */,
+				F4E895B1263742E70030503E /* ProgressViewHelper.swift in Sources */,
 				F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */,
 				F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */,
 				F4A53DF02634A61600FC7FC5 /* Reducer.swift in Sources */,
@@ -498,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -553,7 +581,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

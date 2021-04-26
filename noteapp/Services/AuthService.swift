@@ -2,7 +2,15 @@ import Foundation
 import SwiftyJSON
 
 class AuthService {
-    func signUp(name: String, email: String, password: String, completed: @escaping () -> Void, onError: @escaping (String) -> Void) {
+    
+    /// Sign up for an account.
+    /// - Parameters:
+    ///     - name: The username of the user..
+    ///     - title: The email of the user.
+    ///     - body: The password of the user.
+    ///     - completed: The clousure called when the request is successful.
+    ///     - onError: The clousure called when the request failed or an error occured.
+    func signUp(name: String, email: String, password: String, completed: @escaping (User) -> Void, onError: @escaping (String) -> Void) {
         let url = URL(string: "http://localhost:3000/auth/signup")!
         
         var request = URLRequest(url: url)
@@ -36,7 +44,17 @@ class AuthService {
                 return
             }
             
-            completed()
+            guard let userData = jsonData["data"].string?.data(using: .utf8) else {
+                onError("User data error!")
+                return
+            }
+            
+            guard let user = try? JSONDecoder().decode(User.self, from: userData) else {
+                onError("User data error!")
+                return
+            }
+            
+            completed(user)
         }.resume()
     }
 }

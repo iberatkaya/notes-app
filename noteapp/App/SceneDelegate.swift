@@ -19,18 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = UIWindow(windowScene: windowScene)
 
+        // If the user is not signed in, navigate to the `SignUp` page.
         if mainStore.state.user == nil {
             let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
 
-            let rootVC = storyboard.instantiateViewController(identifier: "SignUpController")
+            let rootVC = storyboard.instantiateViewController(identifier: "SignUp")
 
             let rootNC = UINavigationController(rootViewController: rootVC)
             self.window?.rootViewController = rootNC
         }
+        // If the user is not signed in, navigate to the `Home` page.
         else {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
 
-            let rootVC = storyboard.instantiateViewController(identifier: "HomeController")
+            let rootVC = storyboard.instantiateViewController(identifier: "Home")
 
             let rootNC = UINavigationController(rootViewController: rootVC)
             self.window?.rootViewController = rootNC
