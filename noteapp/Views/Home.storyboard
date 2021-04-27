@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -56,6 +56,12 @@
                                 <rect key="frame" x="12" y="165" width="366" height="514"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTX-xt-cMq">
+                                <rect key="frame" x="16" y="722" width="290" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3G4-SW-ftW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -65,6 +71,7 @@
                             <constraint firstItem="3G4-SW-ftW" firstAttribute="bottom" secondItem="i6o-gp-Gpp" secondAttribute="bottom" constant="60" id="4vF-RU-FCY"/>
                             <constraint firstItem="wgC-qL-bhc" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="20" id="DZU-F3-Wbs"/>
                             <constraint firstItem="wgC-qL-bhc" firstAttribute="top" secondItem="2ek-r7-BJv" secondAttribute="bottom" constant="8" id="N0N-je-mIQ"/>
+                            <constraint firstItem="xTX-xt-cMq" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="16" id="QQo-Sx-Js2"/>
                             <constraint firstItem="3G4-SW-ftW" firstAttribute="bottom" secondItem="QYK-Dj-2Mz" secondAttribute="bottom" constant="28" id="RRT-b5-eJR"/>
                             <constraint firstItem="t90-0s-m2P" firstAttribute="top" secondItem="wgC-qL-bhc" secondAttribute="bottom" constant="28" id="TnJ-Qb-fuq"/>
                             <constraint firstItem="t90-0s-m2P" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="12" id="Uem-jE-K9H"/>
@@ -72,13 +79,16 @@
                             <constraint firstItem="3G4-SW-ftW" firstAttribute="trailing" secondItem="2ek-r7-BJv" secondAttribute="trailing" constant="20" id="aeb-nk-z3h"/>
                             <constraint firstItem="3G4-SW-ftW" firstAttribute="trailing" secondItem="i6o-gp-Gpp" secondAttribute="trailing" constant="20" id="ao4-5j-te6"/>
                             <constraint firstItem="QYK-Dj-2Mz" firstAttribute="centerX" secondItem="26D-pT-aSc" secondAttribute="centerX" id="hO0-hk-nPu"/>
+                            <constraint firstItem="QYK-Dj-2Mz" firstAttribute="top" secondItem="xTX-xt-cMq" secondAttribute="bottom" constant="16" id="hg5-Kw-p55"/>
                             <constraint firstItem="t90-0s-m2P" firstAttribute="centerY" secondItem="26D-pT-aSc" secondAttribute="centerY" id="jdc-g5-Tp7"/>
+                            <constraint firstItem="i6o-gp-Gpp" firstAttribute="leading" secondItem="xTX-xt-cMq" secondAttribute="trailing" constant="16" id="nQ9-nA-zRF"/>
                             <constraint firstItem="3G4-SW-ftW" firstAttribute="trailing" secondItem="t90-0s-m2P" secondAttribute="trailing" constant="12" id="pK3-mT-N4c"/>
                             <constraint firstItem="t90-0s-m2P" firstAttribute="centerX" secondItem="26D-pT-aSc" secondAttribute="centerX" id="ust-uq-4Xq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailLabel" destination="wgC-qL-bhc" id="Dwj-zq-pt9"/>
+                        <outlet property="errorLabel" destination="xTX-xt-cMq" id="Ik5-TM-PBT"/>
                         <outlet property="nameLabel" destination="2ek-r7-BJv" id="EMW-IN-Wdj"/>
                         <outlet property="plusButton" destination="i6o-gp-Gpp" id="MSl-W2-4n9"/>
                         <outlet property="signOutButton" destination="QYK-Dj-2Mz" id="maX-Ow-f41"/>
@@ -100,6 +110,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

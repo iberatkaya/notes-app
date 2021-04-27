@@ -63,7 +63,8 @@ class HomeController: UIViewController, StoreSubscriber, UITableViewDataSource {
     @IBOutlet var signOutButton: UIButton!
     @IBOutlet var plusButton: UIButton!
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -98,12 +99,15 @@ class HomeController: UIViewController, StoreSubscriber, UITableViewDataSource {
                 if data.count == 0 {
                     self.canFetchMore = false
                 }
+                
                 self.notes = self.addNoteArray(self.notes, addedNotes: data)
                 self.refreshControl.endRefreshing()
+                self.errorLabel.text = ""
             }
         }, onError: { err in
-            DispatchQueue.main.async { 
+            DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
+                self.errorLabel.text = err
             }
         })
     }

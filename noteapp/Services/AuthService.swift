@@ -44,15 +44,7 @@ class AuthService {
                 return
             }
             
-            guard let userData = jsonData["data"].string?.data(using: .utf8) else {
-                onError("User data error!")
-                return
-            }
-            
-            guard let user = try? JSONDecoder().decode(User.self, from: userData) else {
-                onError("User data error!")
-                return
-            }
+            let user = User(json: jsonData["data"], password: password)
             
             completed(user)
         }.resume()

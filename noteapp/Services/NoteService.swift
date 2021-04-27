@@ -38,12 +38,20 @@ class NoteService {
         request.httpBody = jsonData
 
         let session = URLSession.shared
-        session.dataTask(with: request) { data, _, error in
+        session.dataTask(with: request) { data, response, error in
             if error != nil {
                 onError("Error: \(String(describing: error))")
                 return
             }
-            guard let data = data else {
+            
+            let status = (response as! HTTPURLResponse).statusCode
+            
+            guard status != 401 else {
+                onError("Unauthorized user!")
+                return
+            }
+            
+            guard let data = data, JSON(data) != JSON.null else {
                 onError("Data in nil!")
                 return
             }
@@ -79,12 +87,20 @@ class NoteService {
         request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
 
         let session = URLSession.shared
-        session.dataTask(with: request) { data, _, error in
+        session.dataTask(with: request) { data, response, error in
             if error != nil {
                 onError("Error: \(String(describing: error))")
                 return
             }
-            guard let data = data else {
+            
+            let status = (response as! HTTPURLResponse).statusCode
+            
+            guard status != 401 else {
+                onError("Unauthorized user!")
+                return
+            }
+            
+            guard let data = data, JSON(data) != JSON.null else {
                 onError("Data in nil!")
                 return
             }
@@ -96,23 +112,10 @@ class NoteService {
                 return
             }
             
-            guard let notesData = jsonData["data"].string?.data(using: .utf8) else {
-                onError("Note data error!")
-                return
-            }
+            var notes = [Note]()
             
-            let decoder = JSONDecoder()
-                
-            // Parse date from Express.js.
-            let dateFormatter = DateFormatter()
-            dateFormatter.locale = .init(identifier: "en_US_POSIX")
-            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                
-            decoder.dateDecodingStrategy = .formatted(dateFormatter)
-
-            guard let notes = try? decoder.decode([Note].self, from: notesData) else {
-                onError("Note data error!")
-                return
+            for (_, note) in jsonData["data"] {
+                notes.append(Note(json: note))
             }
             
             completed(notes)

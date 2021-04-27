@@ -1,12 +1,22 @@
 import Foundation
 import KeychainSwift
+import SwiftyJSON
 
 struct User: Codable {
-    init(id: String, name: String, email: String, password: String) {
+    init(id: String, name: String, email: String, password: String, active: Bool) {
         self.id = id
         self.name = name
         self.email = email
         self.password = password
+        self.active = active
+    }
+    
+    init(json: JSON, password: String) {
+        self.id = json["_id"].string ?? ""
+        self.name = json["name"].string ?? ""
+        self.email = json["email"].string ?? ""
+        self.password = password
+        self.active = json["active"].bool ?? false
     }
     
     /// The name of the user.
@@ -18,6 +28,9 @@ struct User: Codable {
     /// The password of the user.
     var password: String
     
+    /// The user's email verification status..
+    var active: Bool
+    
     /// The ID of the user.
     var id: String
     
@@ -26,6 +39,7 @@ struct User: Codable {
         name = try values.decode(String.self, forKey: .name)
         email = try values.decode(String.self, forKey: .email)
         id = try values.decode(String.self, forKey: ._id)
+        active = try values.decode(Bool.self, forKey: .active)
         
         // Store the password in the Keychain.
         let keychain = KeychainSwift()
@@ -36,7 +50,7 @@ struct User: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case email, name, _id
+        case email, name, _id, active
     }
     
     func encode(to encoder: Encoder) throws {
@@ -44,5 +58,6 @@ struct User: Codable {
         try container.encode(name, forKey: .name)
         try container.encode(email, forKey: .email)
         try container.encode(id, forKey: ._id)
+        try container.encode(active, forKey: .active)
     }
 }

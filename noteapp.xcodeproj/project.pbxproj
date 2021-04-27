@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F444B0BF2638418300B6FA9D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F444B0BE2638418300B6FA9D /* IQKeyboardManagerSwift */; };
 		F483ED082633012A00CC2DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED072633012A00CC2DD7 /* AppDelegate.swift */; };
 		F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED092633012A00CC2DD7 /* SceneDelegate.swift */; };
 		F483ED0C2633012A00CC2DD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED0B2633012A00CC2DD7 /* ViewController.swift */; };
@@ -96,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4A53E002634BC3300FC7FC5 /* KeychainSwift in Frameworks */,
+				F444B0BF2638418300B6FA9D /* IQKeyboardManagerSwift in Frameworks */,
 				F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */,
 				F4A53DE52634A58400FC7FC5 /* ReSwift in Frameworks */,
 			);
@@ -280,6 +282,7 @@
 				F483ED5D263307B100CC2DD7 /* SwiftyJSON */,
 				F4A53DE42634A58400FC7FC5 /* ReSwift */,
 				F4A53DFF2634BC3300FC7FC5 /* KeychainSwift */,
+				F444B0BE2638418300B6FA9D /* IQKeyboardManagerSwift */,
 			);
 			productName = noteapp;
 			productReference = F483ED042633012A00CC2DD7 /* noteapp.app */;
@@ -356,6 +359,7 @@
 				F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				F4A53DE32634A58400FC7FC5 /* XCRemoteSwiftPackageReference "ReSwift" */,
 				F4A53DFE2634BC3300FC7FC5 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				F444B0BD2638418300B6FA9D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = F483ED052633012A00CC2DD7 /* Products */;
 			projectDirPath = "";
@@ -755,6 +759,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F444B0BD2638418300B6FA9D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
 		F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -782,6 +794,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F444B0BE2638418300B6FA9D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F444B0BD2638418300B6FA9D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		F483ED5D263307B100CC2DD7 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F483ED5C263307B100CC2DD7 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;

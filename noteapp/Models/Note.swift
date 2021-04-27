@@ -1,4 +1,5 @@
 import Foundation
+import SwiftyJSON
 
 struct Note: Codable {
     init(id: String, title: String, body: String, date: Date, ownerId: String) {
@@ -7,6 +8,19 @@ struct Note: Codable {
         self.body = body
         self.date = date
         self.ownerId = ownerId
+    }
+    
+    init(json: JSON) {
+        self.id = json["_id"].string ?? ""
+        self.title = json["title"].string ?? ""
+        self.body = json["body"].string ?? ""
+        self.ownerId = json["ownerId"].string ?? ""
+        
+        let isoDate = json["date"].string ?? ""
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = .init(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        self.date = dateFormatter.date(from: isoDate)!
     }
     
     /// The title of the note.
