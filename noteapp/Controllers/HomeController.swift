@@ -179,9 +179,9 @@ class HomeController: UIViewController, StoreSubscriber, UITableViewDataSource, 
     func _setupButton() {
         plusButton.layer.cornerRadius = plusButton.bounds.size.height/2
         plusButton.layer.shadowColor = UIColor.black.cgColor
-        plusButton.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        plusButton.layer.shadowOffset = CGSize(width: 0.0, height: 8.0)
         plusButton.layer.shadowRadius = plusButton.bounds.size.height/2
-        plusButton.layer.shadowOpacity = 0.25
+        plusButton.layer.shadowOpacity = 0.15
     }
 
     /// Set the user as verified and updated UI.
