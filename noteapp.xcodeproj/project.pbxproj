@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F406AF8F263AC198003FE943 /* UpdateNoteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F406AF8E263AC198003FE943 /* UpdateNoteAction.swift */; };
+		F406AF92263AC41C003FE943 /* DeleteNoteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F406AF91263AC41C003FE943 /* DeleteNoteAction.swift */; };
 		F444B0BF2638418300B6FA9D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F444B0BE2638418300B6FA9D /* IQKeyboardManagerSwift */; };
 		F483ED082633012A00CC2DD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED072633012A00CC2DD7 /* AppDelegate.swift */; };
 		F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED092633012A00CC2DD7 /* SceneDelegate.swift */; };
@@ -32,6 +34,11 @@
 		F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */; };
 		F4A53E002634BC3300FC7FC5 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4A53DFF2634BC3300FC7FC5 /* KeychainSwift */; };
 		F4A53E102634BEFB00FC7FC5 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53E0F2634BEFB00FC7FC5 /* String.swift */; };
+		F4ABEBF12638DE4D00123D46 /* NoteDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4ABEBF02638DE4D00123D46 /* NoteDetail.storyboard */; };
+		F4ABEBF32638DE5900123D46 /* NoteDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF22638DE5900123D46 /* NoteDetailController.swift */; };
+		F4ABEBF52638E47900123D46 /* AddNotesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF42638E47900123D46 /* AddNotesAction.swift */; };
+		F4ABEBF72638E55A00123D46 /* NoteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF62638E55A00123D46 /* NoteHelper.swift */; };
+		F4ABEBF92638F74600123D46 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF82638F74600123D46 /* DateHelper.swift */; };
 		F4E8957F2637077B0030503E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8957E2637077B0030503E /* NoteService.swift */; };
 		F4E89585263707CA0030503E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E89584263707CA0030503E /* Note.swift */; };
 		F4E895A1263726C30030503E /* AddNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E895A0263726C30030503E /* AddNote.storyboard */; };
@@ -57,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F406AF8E263AC198003FE943 /* UpdateNoteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoteAction.swift; sourceTree = "<group>"; };
+		F406AF91263AC41C003FE943 /* DeleteNoteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNoteAction.swift; sourceTree = "<group>"; };
 		F483ED042633012A00CC2DD7 /* noteapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noteapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F483ED072633012A00CC2DD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F483ED092633012A00CC2DD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +93,11 @@
 		F4A53DF42634A6BF00FC7FC5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutAction.swift; sourceTree = "<group>"; };
 		F4A53E0F2634BEFB00FC7FC5 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F4ABEBF02638DE4D00123D46 /* NoteDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoteDetail.storyboard; sourceTree = "<group>"; };
+		F4ABEBF22638DE5900123D46 /* NoteDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailController.swift; sourceTree = "<group>"; };
+		F4ABEBF42638E47900123D46 /* AddNotesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesAction.swift; sourceTree = "<group>"; };
+		F4ABEBF62638E55A00123D46 /* NoteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHelper.swift; sourceTree = "<group>"; };
+		F4ABEBF82638F74600123D46 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F4E8957E2637077B0030503E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		F4E89584263707CA0030503E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		F4E895A0263726C30030503E /* AddNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNote.storyboard; sourceTree = "<group>"; };
@@ -197,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				F4E895B0263742E70030503E /* ProgressViewHelper.swift */,
+				F4ABEBF62638E55A00123D46 /* NoteHelper.swift */,
+				F4ABEBF82638F74600123D46 /* DateHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -216,6 +232,7 @@
 				F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */,
 				F483ED0D2633012A00CC2DD7 /* Main.storyboard */,
 				F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */,
+				F4ABEBF02638DE4D00123D46 /* NoteDetail.storyboard */,
 				F4E895A0263726C30030503E /* AddNote.storyboard */,
 				F4A53DC626348C6E00FC7FC5 /* Login.storyboard */,
 				F483ED452633023B00CC2DD7 /* SignUp.storyboard */,
@@ -229,6 +246,7 @@
 				F483ED0B2633012A00CC2DD7 /* ViewController.swift */,
 				F483ED4A2633024800CC2DD7 /* SignUpController.swift */,
 				F4E895A52637347D0030503E /* AddNoteController.swift */,
+				F4ABEBF22638DE5900123D46 /* NoteDetailController.swift */,
 				F4A53DD026349C7900FC7FC5 /* HomeController.swift */,
 			);
 			path = Controllers;
@@ -249,6 +267,9 @@
 			children = (
 				F4A53DEA2634A5D900FC7FC5 /* SetUserAction.swift */,
 				F4A53DF92634B6E900FC7FC5 /* SignOutAction.swift */,
+				F4ABEBF42638E47900123D46 /* AddNotesAction.swift */,
+				F406AF91263AC41C003FE943 /* DeleteNoteAction.swift */,
+				F406AF8E263AC198003FE943 /* UpdateNoteAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -382,6 +403,7 @@
 				F483ED112633012D00CC2DD7 /* Assets.xcassets in Resources */,
 				F483ED462633023B00CC2DD7 /* SignUp.storyboard in Resources */,
 				F4A53DCC26349C6E00FC7FC5 /* Home.storyboard in Resources */,
+				F4ABEBF12638DE4D00123D46 /* NoteDetail.storyboard in Resources */,
 				F4A53DC726348C6E00FC7FC5 /* Login.storyboard in Resources */,
 				F483ED0F2633012A00CC2DD7 /* Main.storyboard in Resources */,
 			);
@@ -417,10 +439,16 @@
 				F4E89585263707CA0030503E /* Note.swift in Sources */,
 				F4A53DEB2634A5D900FC7FC5 /* SetUserAction.swift in Sources */,
 				F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */,
+				F406AF92263AC41C003FE943 /* DeleteNoteAction.swift in Sources */,
 				F4E8957F2637077B0030503E /* NoteService.swift in Sources */,
+				F406AF8F263AC198003FE943 /* UpdateNoteAction.swift in Sources */,
+				F4ABEBF52638E47900123D46 /* AddNotesAction.swift in Sources */,
+				F4ABEBF72638E55A00123D46 /* NoteHelper.swift in Sources */,
+				F4ABEBF32638DE5900123D46 /* NoteDetailController.swift in Sources */,
 				F483ED67263309A300CC2DD7 /* User.swift in Sources */,
 				F4A53DF52634A6BF00FC7FC5 /* Store.swift in Sources */,
 				F4E895B1263742E70030503E /* ProgressViewHelper.swift in Sources */,
+				F4ABEBF92638F74600123D46 /* DateHelper.swift in Sources */,
 				F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */,
 				F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */,
 				F4A53DF02634A61600FC7FC5 /* Reducer.swift in Sources */,

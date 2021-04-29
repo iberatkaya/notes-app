@@ -9,6 +9,8 @@ struct AppState: StateType {
             }
         }
     }
+    
+    var notes = [Note]()
 
     init() {
         if let userData = UserDefaults.standard.object(forKey: "user") {

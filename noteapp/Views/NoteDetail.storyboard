@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Note Detail Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NoteDetailController" customModule="noteapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Title" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7RL-cr-crb" userLabel="Title View">
+                                <rect key="frame" x="20" y="64" width="240" height="24"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="eMP-qL-Fn8"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GUF-wT-9zU" userLabel="Note Body View">
+                                <rect key="frame" x="20" y="123" width="374" height="650"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oA-L6-uRl" userLabel="Date Label">
+                                <rect key="frame" x="306" y="64" width="60" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="MdF-JY-wSN"/>
+                                    <constraint firstAttribute="width" constant="60" id="RFZ-Oh-8PF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaU-RB-JeL" userLabel="Divider">
+                                <rect key="frame" x="20" y="102" width="374" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b51-4l-0rJ" userLabel="Edit Button">
+                                <rect key="frame" x="382" y="64" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="NS0-rA-xWE"/>
+                                    <constraint firstAttribute="width" constant="24" id="eNY-ew-Ytw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Button" image="pencil.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="editButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RKK-hm-hl6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LaU-RB-JeL" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="0Op-7o-i90"/>
+                            <constraint firstItem="8oA-L6-uRl" firstAttribute="leading" secondItem="7RL-cr-crb" secondAttribute="trailing" constant="46" id="49S-6T-CSy"/>
+                            <constraint firstItem="b51-4l-0rJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="DWe-es-hBM"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8oA-L6-uRl" secondAttribute="trailing" constant="48" id="HT2-ju-ZyZ"/>
+                            <constraint firstItem="8oA-L6-uRl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="IN4-6k-41Q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="b51-4l-0rJ" secondAttribute="trailing" constant="8" id="IV6-QE-DVB"/>
+                            <constraint firstItem="GUF-wT-9zU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="UYX-cT-1o2"/>
+                            <constraint firstItem="7RL-cr-crb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Zyp-4n-l7E"/>
+                            <constraint firstItem="b51-4l-0rJ" firstAttribute="leading" secondItem="8oA-L6-uRl" secondAttribute="trailing" constant="16" id="dyJ-1E-Cz9"/>
+                            <constraint firstItem="GUF-wT-9zU" firstAttribute="top" secondItem="LaU-RB-JeL" secondAttribute="bottom" constant="20" id="hLO-Qr-xtP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LaU-RB-JeL" secondAttribute="trailing" id="jlR-o4-jkF"/>
+                            <constraint firstItem="LaU-RB-JeL" firstAttribute="top" secondItem="7RL-cr-crb" secondAttribute="bottom" constant="14" id="lNM-zT-2E4"/>
+                            <constraint firstItem="GUF-wT-9zU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="wc9-RU-KWk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GUF-wT-9zU" secondAttribute="trailing" constant="20" id="wfd-jn-2xl"/>
+                            <constraint firstItem="7RL-cr-crb" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="wfy-3Z-P0Y"/>
+                            <constraint firstItem="GUF-wT-9zU" firstAttribute="top" secondItem="8oA-L6-uRl" secondAttribute="bottom" constant="35" id="xXO-hq-sLg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyView" destination="GUF-wT-9zU" id="Z5v-xU-a1k"/>
+                        <outlet property="dateLabel" destination="8oA-L6-uRl" id="MPF-wn-x1x"/>
+                        <outlet property="editButton" destination="b51-4l-0rJ" id="E4S-40-fsj"/>
+                        <outlet property="titleView" destination="7RL-cr-crb" id="VdE-DE-AH5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.753623188405811" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

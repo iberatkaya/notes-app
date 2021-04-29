@@ -50,18 +50,23 @@ class AddNoteController: UIViewController, StoreSubscriber {
     }
 
     /// Hide and redisplay the UI elements, set the user, and navigate to the Home Page.
-    func setSuccess() {
+    /// -  Parameters:
+    ///     - note: The created note that will be added to the store.
+    func setSuccess(note: Note) {
         DispatchQueue.main.async {
             UIView.transition(with: self.submitButton, duration: 0.4, options: .transitionCrossDissolve, animations: { () -> Void in
                 self.errorMessageLabel.isHidden = true
                 self.submitButton.isHidden = false
                 self.progressView.isHidden = true
+                mainStore.dispatch(AddNotesAction(notes: [note]))
             }, completion: { _ in })
             self.navigationController?.popViewController(animated: true)
         }
     }
 
     /// Set the UI to display the error.
+    /// -  Parameters:
+    ///     - error: The error message.
     func setError(error: String) {
         DispatchQueue.main.async {
             UIView.transition(with: self.submitButton, duration: 0.4, options: .transitionCrossDissolve, animations: { () -> Void in
@@ -98,8 +103,8 @@ class AddNoteController: UIViewController, StoreSubscriber {
         setLoading()
 
         let noteService = NoteService(user: user)
-        noteService.createNote(title: title, body: body, completed: {
-            self.setSuccess()
+        noteService.createNote(title: title, body: body, completed: { note in
+            self.setSuccess(note: note)
         }, onError: { err in
             self.setError(error: err)
         })

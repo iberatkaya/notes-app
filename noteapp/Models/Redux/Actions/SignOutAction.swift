@@ -1,4 +1,4 @@
 import ReSwift
 
-///Sign out the user.
+/// Sign out the user.
 struct SignOutAction: Action {}
