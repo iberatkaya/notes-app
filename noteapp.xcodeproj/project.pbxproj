@@ -39,6 +39,7 @@
 		F4ABEBF52638E47900123D46 /* AddNotesAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF42638E47900123D46 /* AddNotesAction.swift */; };
 		F4ABEBF72638E55A00123D46 /* NoteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF62638E55A00123D46 /* NoteHelper.swift */; };
 		F4ABEBF92638F74600123D46 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF82638F74600123D46 /* DateHelper.swift */; };
+		F4B4696E263D9CED006BEC63 /* ServiceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4696D263D9CED006BEC63 /* ServiceUtils.swift */; };
 		F4E8957F2637077B0030503E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8957E2637077B0030503E /* NoteService.swift */; };
 		F4E89585263707CA0030503E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E89584263707CA0030503E /* Note.swift */; };
 		F4E895A1263726C30030503E /* AddNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E895A0263726C30030503E /* AddNote.storyboard */; };
@@ -98,6 +99,7 @@
 		F4ABEBF42638E47900123D46 /* AddNotesAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNotesAction.swift; sourceTree = "<group>"; };
 		F4ABEBF62638E55A00123D46 /* NoteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHelper.swift; sourceTree = "<group>"; };
 		F4ABEBF82638F74600123D46 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		F4B4696D263D9CED006BEC63 /* ServiceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUtils.swift; sourceTree = "<group>"; };
 		F4E8957E2637077B0030503E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		F4E89584263707CA0030503E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		F4E895A0263726C30030503E /* AddNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNote.storyboard; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				F483ED522633041F00CC2DD7 /* AuthService.swift */,
+				F4B4696D263D9CED006BEC63 /* ServiceUtils.swift */,
 				F4E8957E2637077B0030503E /* NoteService.swift */,
 			);
 			path = Services;
@@ -437,6 +440,7 @@
 				F4A53DD62634A0B800FC7FC5 /* AppState.swift in Sources */,
 				F4E895A62637347D0030503E /* AddNoteController.swift in Sources */,
 				F4E89585263707CA0030503E /* Note.swift in Sources */,
+				F4B4696E263D9CED006BEC63 /* ServiceUtils.swift in Sources */,
 				F4A53DEB2634A5D900FC7FC5 /* SetUserAction.swift in Sources */,
 				F4A53DFA2634B6E900FC7FC5 /* SignOutAction.swift in Sources */,
 				F406AF92263AC41C003FE943 /* DeleteNoteAction.swift in Sources */,

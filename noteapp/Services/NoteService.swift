@@ -15,7 +15,7 @@ class NoteService {
     ///     - completed: The clousure called when the request is successful.
     ///     - onError: The clousure called when the request failed or an error occured.
     func createNote(title: String, body: String, completed: @escaping (Note) -> Void, onError: @escaping (String) -> Void) {
-        let url = URL(string: "http://localhost:3000/note/addnote")!
+        let url = URL(string: "\(baseUrl)/note/addnote")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -75,7 +75,7 @@ class NoteService {
     ///     - completed: The clousure called when the request is successful.
     ///     - onError: The clousure called when the request failed or an error occured.
     func deleteNote(noteId: String, completed: @escaping () -> Void, onError: @escaping (String) -> Void) {
-        let url = URL(string: "http://localhost:3000/note/deletenote")!
+        let url = URL(string: "\(baseUrl)/note/deletenote")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -135,7 +135,7 @@ class NoteService {
     ///     - completed: The clousure called when the request is successful.
     ///     - onError: The clousure called when the request failed or an error occured.
     func editNote(id: String, title: String?, body: String?, completed: @escaping () -> Void, onError: @escaping (String) -> Void) {
-        let url = URL(string: "http://localhost:3000/note/editnote")!
+        let url = URL(string: "\(baseUrl)/note/editnote")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -200,7 +200,7 @@ class NoteService {
     ///     - completed: The clousure called when the request is successful.
     ///     - onError: The clousure called when the request failed or an error occured.
     func fetchNotes(page: Int, completed: @escaping ([Note]) -> Void, onError: @escaping (String, Int) -> Void) {
-        let url = URL(string: "http://localhost:3000/note/getnotes?page=\(page)")!
+        let url = URL(string: "\(baseUrl)/note/getnotes?page=\(page)")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

@@ -11,7 +11,7 @@ class AuthService {
     ///     - completed: The clousure called when the request is successful.
     ///     - onError: The clousure called when the request failed or an error occured.
     func signUp(name: String, email: String, password: String, completed: @escaping (User) -> Void, onError: @escaping (String) -> Void) {
-        let url = URL(string: "http://localhost:3000/auth/signup")!
+        let url = URL(string: "\(baseUrl)/auth/signup")!
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
