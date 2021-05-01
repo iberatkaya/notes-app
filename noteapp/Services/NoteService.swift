@@ -22,11 +22,7 @@ class NoteService {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let loginString = String(format: "%@:%@", user.email, user.password)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        setBasicAuthHeader(request: &request, email: user.email, password: user.password)
         
         let data = ["body": body, "title": title]
 
@@ -82,11 +78,7 @@ class NoteService {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let loginString = String(format: "%@:%@", user.email, user.password)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        setBasicAuthHeader(request: &request, email: user.email, password: user.password)
         
         let data = ["noteId": noteId]
 
@@ -142,11 +134,7 @@ class NoteService {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let loginString = String(format: "%@:%@", user.email, user.password)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        setBasicAuthHeader(request: &request, email: user.email, password: user.password)
         
         var data = ["id": id]
         
@@ -207,11 +195,7 @@ class NoteService {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let loginString = String(format: "%@:%@", user.email, user.password)
-        let loginData = loginString.data(using: String.Encoding.utf8)!
-        let base64LoginString = loginData.base64EncodedString()
-        
-        request.setValue("Basic \(base64LoginString)", forHTTPHeaderField: "Authorization")
+        setBasicAuthHeader(request: &request, email: user.email, password: user.password)
 
         let session = URLSession.shared
         session.dataTask(with: request) { data, response, error in

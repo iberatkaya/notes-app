@@ -2,10 +2,9 @@ import KeychainSwift
 import ReSwift
 import UIKit
 
-class SignUpController: UIViewController, StoreSubscriber {
+class LoginController: UIViewController, StoreSubscriber {
     // MARK: Properties
 
-    @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var submitButton: UIButton!
@@ -52,7 +51,7 @@ class SignUpController: UIViewController, StoreSubscriber {
                 self.progressView.isHidden = true
             }, completion: { _ in })
             
-            // Navigate to the `Home` Page.
+            // Navigate to the Home Page.
             let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "Home")
             vc.modalPresentationStyle = .fullScreen
             let navigationController = UINavigationController(rootViewController: vc)
@@ -86,31 +85,19 @@ class SignUpController: UIViewController, StoreSubscriber {
 
     @IBAction func submitButtonAction(_ sender: UIButton) {
         // Get the input texts from the text fields.
-        guard let nameText = nameTextField.text, let emailText = emailTextField.text, let passwordText = passwordTextField.text else {
+        guard let emailText = emailTextField.text, let passwordText = passwordTextField.text else {
             return
         }
         
         // Set the UI to a loading state.
         setLoading()
 
-        // Sign up the user.
+        // Check if the user exists.
         let authService = AuthService()
-        authService.signUp(name: nameText, email: emailText, password: passwordText, completed: { user in
+        authService.login(email: emailText, password: passwordText, completed: { user in
             self.setSuccess(user: user)
         }, onError: { err in
             self.setError(error: err)
         })
-    }
-    
-    @IBAction func loginButtonAction(_ sender: UIButton) {
-        // Navigate to the `Login` Page.
-        
-        let storyboard = UIStoryboard(name: "Login", bundle: nil)
-
-        guard let vc = storyboard.instantiateViewController(withIdentifier: "Login") as? LoginController else {
-            return
-        }
-
-        navigationController?.pushViewController(vc, animated: true)
     }
 }

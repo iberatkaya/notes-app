@@ -40,6 +40,7 @@
 		F4ABEBF72638E55A00123D46 /* NoteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF62638E55A00123D46 /* NoteHelper.swift */; };
 		F4ABEBF92638F74600123D46 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABEBF82638F74600123D46 /* DateHelper.swift */; };
 		F4B4696E263D9CED006BEC63 /* ServiceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4696D263D9CED006BEC63 /* ServiceUtils.swift */; };
+		F4B46970263DA91F006BEC63 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B4696F263DA91F006BEC63 /* LoginController.swift */; };
 		F4E8957F2637077B0030503E /* NoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E8957E2637077B0030503E /* NoteService.swift */; };
 		F4E89585263707CA0030503E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E89584263707CA0030503E /* Note.swift */; };
 		F4E895A1263726C30030503E /* AddNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4E895A0263726C30030503E /* AddNote.storyboard */; };
@@ -100,6 +101,7 @@
 		F4ABEBF62638E55A00123D46 /* NoteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteHelper.swift; sourceTree = "<group>"; };
 		F4ABEBF82638F74600123D46 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		F4B4696D263D9CED006BEC63 /* ServiceUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceUtils.swift; sourceTree = "<group>"; };
+		F4B4696F263DA91F006BEC63 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		F4E8957E2637077B0030503E /* NoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteService.swift; sourceTree = "<group>"; };
 		F4E89584263707CA0030503E /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		F4E895A0263726C30030503E /* AddNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddNote.storyboard; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				F483ED0B2633012A00CC2DD7 /* ViewController.swift */,
 				F483ED4A2633024800CC2DD7 /* SignUpController.swift */,
 				F4E895A52637347D0030503E /* AddNoteController.swift */,
+				F4B4696F263DA91F006BEC63 /* LoginController.swift */,
 				F4ABEBF22638DE5900123D46 /* NoteDetailController.swift */,
 				F4A53DD026349C7900FC7FC5 /* HomeController.swift */,
 			);
@@ -452,6 +455,7 @@
 				F483ED67263309A300CC2DD7 /* User.swift in Sources */,
 				F4A53DF52634A6BF00FC7FC5 /* Store.swift in Sources */,
 				F4E895B1263742E70030503E /* ProgressViewHelper.swift in Sources */,
+				F4B46970263DA91F006BEC63 /* LoginController.swift in Sources */,
 				F4ABEBF92638F74600123D46 /* DateHelper.swift in Sources */,
 				F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */,
 				F483ED0A2633012A00CC2DD7 /* SceneDelegate.swift in Sources */,
