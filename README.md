@@ -6,7 +6,6 @@ Notes App is an iOS app built with UIKit. It is a client for the [Notes Server](
 
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Documentation](#documentation)
 - [Contributing](#contributing)
 
 ## Features
