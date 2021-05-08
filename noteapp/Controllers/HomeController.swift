@@ -93,7 +93,7 @@ class HomeController: UIViewController, StoreSubscriber, UITableViewDataSource, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Notes"
+        navigationItem.title = "Simple Notes"
         _setupButton()
         _setupTable()
         _fetchData()

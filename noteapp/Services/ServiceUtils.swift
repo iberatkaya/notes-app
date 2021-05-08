@@ -1,10 +1,10 @@
 import Foundation
 
 /// Determines whether the base url should be the localhost or the remote server.
-let production = false
+let production = true
 
 /// The base url for the requests.
-let baseUrl = production ? "http://notes-app.us-west-2.elasticbeanstalk.com" : "http://localhost:3000"
+let baseUrl = production ? "https://ibk-note-app.herokuapp.com" : "http://localhost:3000"
 
 /// Set the Basic Auth Header for a request
 /// - Parameters:
