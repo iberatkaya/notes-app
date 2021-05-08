@@ -37,3 +37,6 @@ DerivedData/
 # scan temporary files
 **/fastlane/test_output
 **/fastlane/README.md
+
+noteapp.app.dSYM.zip
+noteapp.ipa
