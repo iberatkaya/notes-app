@@ -77,6 +77,9 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3G4-SW-ftW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="homePage">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="2ek-r7-BJv" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="20" id="1Im-D6-zLA"/>
                             <constraint firstItem="2ek-r7-BJv" firstAttribute="top" secondItem="3G4-SW-ftW" secondAttribute="top" constant="12" id="4rc-H8-xxf"/>

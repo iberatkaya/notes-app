@@ -57,6 +57,7 @@
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERT-DL-NUL" userLabel="Login Button">
                                 <rect key="frame" x="108" y="499" width="198" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonAction:" destination="TlR-Uo-dMQ" eventType="touchUpInside" id="JqX-N7-p3h"/>

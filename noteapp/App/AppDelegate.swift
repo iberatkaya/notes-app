@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         IQKeyboardManager.shared.enable = true
+        
+        if CommandLine.arguments.contains("-reset-user") {
+            UserDefaults.standard.removeObject(forKey: "user")
+        }
 
         return true
     }

@@ -17,12 +17,12 @@
 		F483ED112633012D00CC2DD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F483ED102633012D00CC2DD7 /* Assets.xcassets */; };
 		F483ED142633012D00CC2DD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F483ED122633012D00CC2DD7 /* LaunchScreen.storyboard */; };
 		F483ED1F2633012D00CC2DD7 /* noteappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED1E2633012D00CC2DD7 /* noteappTests.swift */; };
-		F483ED2A2633012D00CC2DD7 /* noteappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED292633012D00CC2DD7 /* noteappUITests.swift */; };
 		F483ED462633023B00CC2DD7 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F483ED452633023B00CC2DD7 /* SignUp.storyboard */; };
 		F483ED4B2633024800CC2DD7 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED4A2633024800CC2DD7 /* SignUpController.swift */; };
 		F483ED532633041F00CC2DD7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED522633041F00CC2DD7 /* AuthService.swift */; };
 		F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F483ED5D263307B100CC2DD7 /* SwiftyJSON */; };
 		F483ED67263309A300CC2DD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED66263309A300CC2DD7 /* User.swift */; };
+		F4999C112647D4990051D2AC /* AuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999C102647D4990051D2AC /* AuthUITests.swift */; };
 		F4A53DC726348C6E00FC7FC5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A53DC626348C6E00FC7FC5 /* Login.storyboard */; };
 		F4A53DCC26349C6E00FC7FC5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */; };
 		F4A53DD126349C7900FC7FC5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DD026349C7900FC7FC5 /* HomeController.swift */; };
@@ -80,12 +80,12 @@
 		F483ED1E2633012D00CC2DD7 /* noteappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteappTests.swift; sourceTree = "<group>"; };
 		F483ED202633012D00CC2DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F483ED252633012D00CC2DD7 /* noteappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = noteappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F483ED292633012D00CC2DD7 /* noteappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noteappUITests.swift; sourceTree = "<group>"; };
 		F483ED2B2633012D00CC2DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F483ED452633023B00CC2DD7 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		F483ED4A2633024800CC2DD7 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		F483ED522633041F00CC2DD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F483ED66263309A300CC2DD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F4999C102647D4990051D2AC /* AuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUITests.swift; sourceTree = "<group>"; };
 		F49CABF42646A0F300EC51D7 /* noteapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = noteapp.entitlements; sourceTree = "<group>"; };
 		F4A53DC626348C6E00FC7FC5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 		F483ED282633012D00CC2DD7 /* noteappUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F483ED292633012D00CC2DD7 /* noteappUITests.swift */,
+				F4999C102647D4990051D2AC /* AuthUITests.swift */,
 				F483ED2B2633012D00CC2DD7 /* Info.plist */,
 			);
 			path = noteappUITests;
@@ -478,7 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F483ED2A2633012D00CC2DD7 /* noteappUITests.swift in Sources */,
+				F4999C112647D4990051D2AC /* AuthUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
