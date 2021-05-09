@@ -20,6 +20,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzT-vb-KY2">
                                 <rect key="frame" x="20" y="124" width="374" height="34"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <accessibility key="accessibilityConfiguration" identifier="titleTextField"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -31,6 +32,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dV5-eO-1AO">
                                 <rect key="frame" x="20" y="206" width="374" height="350"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <accessibility key="accessibilityConfiguration" identifier="bodyTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="TsQ-c0-XjB"/>
                                 </constraints>
@@ -58,6 +60,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPk-vB-ADQ">
                                 <rect key="frame" x="153" y="814" width="108" height="38"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="addNoteSubmitButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="108" id="Vrc-fM-DiK"/>
                                     <constraint firstAttribute="height" constant="38" id="rjn-79-i0W"/>

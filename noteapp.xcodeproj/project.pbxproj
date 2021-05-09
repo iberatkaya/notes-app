@@ -23,6 +23,8 @@
 		F483ED5E263307B100CC2DD7 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = F483ED5D263307B100CC2DD7 /* SwiftyJSON */; };
 		F483ED67263309A300CC2DD7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483ED66263309A300CC2DD7 /* User.swift */; };
 		F4999C112647D4990051D2AC /* AuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999C102647D4990051D2AC /* AuthUITests.swift */; };
+		F4999C142647E83C0051D2AC /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999C132647E83C0051D2AC /* TestUtils.swift */; };
+		F4999C162647E8D20051D2AC /* NoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4999C152647E8D20051D2AC /* NoteTests.swift */; };
 		F4A53DC726348C6E00FC7FC5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A53DC626348C6E00FC7FC5 /* Login.storyboard */; };
 		F4A53DCC26349C6E00FC7FC5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */; };
 		F4A53DD126349C7900FC7FC5 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A53DD026349C7900FC7FC5 /* HomeController.swift */; };
@@ -86,6 +88,8 @@
 		F483ED522633041F00CC2DD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F483ED66263309A300CC2DD7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F4999C102647D4990051D2AC /* AuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUITests.swift; sourceTree = "<group>"; };
+		F4999C132647E83C0051D2AC /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		F4999C152647E8D20051D2AC /* NoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTests.swift; sourceTree = "<group>"; };
 		F49CABF42646A0F300EC51D7 /* noteapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = noteapp.entitlements; sourceTree = "<group>"; };
 		F4A53DC626348C6E00FC7FC5 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F4A53DCB26349C6E00FC7FC5 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -188,6 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				F4999C102647D4990051D2AC /* AuthUITests.swift */,
+				F4999C152647E8D20051D2AC /* NoteTests.swift */,
+				F4999C122647E8310051D2AC /* Utils */,
 				F483ED2B2633012D00CC2DD7 /* Info.plist */,
 			);
 			path = noteappUITests;
@@ -268,6 +274,14 @@
 				F483ED072633012A00CC2DD7 /* AppDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F4999C122647E8310051D2AC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F4999C132647E83C0051D2AC /* TestUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		F4A53DE92634A5CC00FC7FC5 /* Actions */ = {
@@ -479,6 +493,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4999C112647D4990051D2AC /* AuthUITests.swift in Sources */,
+				F4999C142647E83C0051D2AC /* TestUtils.swift in Sources */,
+				F4999C162647E8D20051D2AC /* NoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-r7-BJv" userLabel="Name Label">
                                 <rect key="frame" x="20" y="56" width="350" height="29"/>
+                                <accessibility key="accessibilityConfiguration" identifier="appLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,6 +42,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6o-gp-Gpp">
                                 <rect key="frame" x="322" y="726" width="48" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <accessibility key="accessibilityConfiguration" identifier="addNoteButton">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="Wd0-Jg-76L"/>
                                     <constraint firstAttribute="height" constant="48" id="zRC-SI-0Kd"/>
@@ -77,9 +81,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3G4-SW-ftW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <accessibility key="accessibilityConfiguration" identifier="homePage">
-                            <bool key="isElement" value="YES"/>
-                        </accessibility>
                         <constraints>
                             <constraint firstItem="2ek-r7-BJv" firstAttribute="leading" secondItem="3G4-SW-ftW" secondAttribute="leading" constant="20" id="1Im-D6-zLA"/>
                             <constraint firstItem="2ek-r7-BJv" firstAttribute="top" secondItem="3G4-SW-ftW" secondAttribute="top" constant="12" id="4rc-H8-xxf"/>

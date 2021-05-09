@@ -24,29 +24,19 @@ class AuthUITests: XCTestCase {
     /// Test a successful login.
     func testLogin() throws {
         let app = XCUIApplication()
+        
+        // Delete the user from local storage.
         app.launchArguments += ["-reset-user"]
+        
+        // Launch the app.
         app.launch()
         
-        let loginButton = app.buttons["loginButton"]
-        XCTAssert(loginButton.exists)
+        signIn(app: app)
         
-        loginButton.tap()
-        
-        let emailTextField = app.textFields["emailTextField"]
-        let passwordTextField = app.secureTextFields["passwordTextField"]
-        let submitButton = app.buttons["submitButton"]
-        
-        XCTAssert(submitButton.exists)
-        
-        _tapAndWrite(field: emailTextField, text: "beratkaya1998@gmail.com")
-        
-        _tapAndWrite(field: passwordTextField, text: "berat12345")
-        
-        submitButton.tap()
-        
+        // Expect the Home Page to appear.
         let homePage = app.otherElements["homePage"]
         
-        let homePageExists = homePage.waitForExistence(timeout: TimeInterval(10))
+        let homePageExists = homePage.waitForExistence(timeout: TimeInterval(8))
         
         XCTAssert(homePageExists)
     }
@@ -54,7 +44,11 @@ class AuthUITests: XCTestCase {
     /// Test a successful login.
     func testUnsuccessfulLogin() throws {
         let app = XCUIApplication()
+        
+        // Delete the user from local storage.
         app.launchArguments += ["-reset-user"]
+        
+        // Launch the app.
         app.launch()
         
         let loginButton = app.buttons["loginButton"]
@@ -68,17 +62,11 @@ class AuthUITests: XCTestCase {
         
         submitButton.tap()
         
+        // Expect the Home Page to not appear.
         let homePage = app.otherElements["homePage"]
         
-        let homePageExists = homePage.waitForExistence(timeout: TimeInterval(10))
+        let homePageExists = homePage.waitForExistence(timeout: TimeInterval(8))
         
         XCTAssert(!homePageExists && submitButton.exists)
-    }
-    
-    /// Write to a XCUIElement (generally a TextField).
-    func _tapAndWrite(field: XCUIElement, text: String) {
-        XCTAssertTrue(field.exists, "\(field.label) XCUIElement doesn't exist")
-        field.tap()
-        field.typeText(text)
     }
 }
