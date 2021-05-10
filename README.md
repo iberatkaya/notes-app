@@ -1,6 +1,6 @@
-# Notes App
+# Simple Notes
 
-Notes App is an iOS app built with UIKit. It is a client for the [Notes Server](https://github.com/iberatkaya/notes-server).
+Simple Notes is an note taking iOS app built with UIKit. It is a client for the Node.js REST API I built named [Notes Server](https://github.com/iberatkaya/notes-server). Simple Notes is available on the [App Store](https://apps.apple.com/us/app/simple-notes-save-notes/id1566712582).
 
 ## Table of contents
 
@@ -16,11 +16,10 @@ Notes App is an iOS app built with UIKit. It is a client for the [Notes Server](
 ## Screenshots
 
 <p align="center">
-    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/116788283-64158f80-aab1-11eb-9176-f5269f65b605.png" width="220" height="480">
-    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/116786879-b5ba1c00-aaa9-11eb-84a0-8db6587b5ff7.png" width="220" height="480">
-    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/116788288-68da4380-aab1-11eb-9f06-146322b0d65f.png" width="220" height="480">
-    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/116786872-b488ef00-aaa9-11eb-8223-d8158a832d8f.png" width="220" height="480">
-    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/116786865-b2269500-aaa9-11eb-8499-50b6e8f94205.png" width="220" height="480">
+    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/117680855-38ce2700-b1ba-11eb-83af-f02fce5f2d8f.png" width="220" height="480">
+    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/117680985-569b8c00-b1ba-11eb-9ea6-ec2e8a9538a8.png" width="220" height="480">
+    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/117680972-54393200-b1ba-11eb-9f9f-32f2147d2431.png" width="220" height="480">
+    <img alt="Screenshot" src="https://user-images.githubusercontent.com/34488374/117680982-5602f580-b1ba-11eb-8571-efce20ce70cc.png" width="220" height="480">
 </p>
 
 
