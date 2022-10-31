@@ -1,6 +1,6 @@
 # Simple Notes
 
-Simple Notes is an note taking iOS app built with UIKit. It is a client for the Node.js REST API I built named [Notes Server](https://github.com/iberatkaya/notes-server). Simple Notes is available on the [App Store](https://apps.apple.com/us/app/simple-notes-save-notes/id1566712582).
+Simple Notes is an note taking iOS app built with UIKit. It is a client for the Node.js REST API I built named [Notes Server](https://github.com/iberatkaya/notes-server).
 
 ## Table of contents
 
